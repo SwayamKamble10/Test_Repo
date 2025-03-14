@@ -45,11 +45,23 @@
             font-size: 1.2rem;
             padding: 10px 20px;
         }
+        .error-alert {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1 class="text-center mb-4">Algerian Forest Fire Prediction</h1>
+        
+        {% if error %}
+        <div class="alert alert-danger error-alert" role="alert">
+            <h4 class="alert-heading">Error!</h4>
+            <p>{{ error }}</p>
+        </div>
+        {% endif %}
+
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="prediction-form">
